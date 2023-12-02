@@ -1,0 +1,28 @@
+﻿<div>
+    <h1>Welcome to Registration Form!</h1>
+    {{if(AccountInfo)}}
+    {
+    <h1>Account Info</h1>
+    <form method="post" action="/Users/ChangeAccountInfo">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username..." name="Username" value="{{Username}}">
+        </div>
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Email..." name="Email" value="{{Email}}">
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password..." name="Password">
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password..." name="ConfirmPassword">
+        </div>
+        <div style="margin-top:16px;">
+            <button type="submit">Change Info</button>
+            <a href="/Users/DeleteUser" style="margin-top:16px; border:1px solid black; border-radius:8px; background-color:red; text-decoration:none; color:white">Delete Account</a>
+        </div>
+        </div>
+    </form>
+}
+</div>
